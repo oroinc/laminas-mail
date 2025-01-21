@@ -1,18 +1,17 @@
 {
     "name": "laminas/laminas-mail",
-    "description": "Provides generalized functionality to compose and send both text and MIME-compliant multipart e-mail messages",
+    "description": "A fork of laminas-mail that enables PHP 8.4 support",
     "keywords": [
         "laminas",
         "mail"
     ],
     "homepage": "https://laminas.dev",
-    "abandoned": "symfony/mailer",
     "license": "BSD-3-Clause",
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "ext-iconv": "*",
         "laminas/laminas-loader": "^2.9.0",
-        "laminas/laminas-mime": "^2.11.0",
+        "oroinc/laminas-mime": "^2.14.0",
         "laminas/laminas-stdlib": "^3.17.0",
         "laminas/laminas-validator": "^2.31.0",
         "symfony/polyfill-mbstring": "^1.27.0",
