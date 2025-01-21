@@ -1,5 +1,5 @@
 {
-    "name": "laminas/laminas-mail",
+    "name": "oroinc/laminas-mail",
     "description": "A fork of laminas-mail that enables PHP 8.4 support",
     "keywords": [
         "laminas",
