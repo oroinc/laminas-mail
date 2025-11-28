@@ -69,7 +69,7 @@ class Address implements Address\AddressInterface
      */
     public function __construct($email, $name = null, $comment = null)
     {
-        $emailAddressValidator = new EmailAddressValidator(Hostname::ALLOW_DNS | Hostname::ALLOW_LOCAL);
+        $emailAddressValidator = new EmailAddressValidator(['allow' => Hostname::ALLOW_DNS | Hostname::ALLOW_LOCAL]);
         if (! is_string($email) || empty($email)) {
             throw new Exception\InvalidArgumentException('Email must be a valid email address');
         }
