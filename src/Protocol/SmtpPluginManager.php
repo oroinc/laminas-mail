@@ -31,7 +31,7 @@ class SmtpPluginManager extends AbstractPluginManager
      *
      * @var array<array-key, class-string>
      */
-    protected $aliases = [
+    protected array $aliases = [
         'crammd5' => Smtp\Auth\Crammd5::class,
         'cramMd5' => Smtp\Auth\Crammd5::class,
         'CramMd5' => Smtp\Auth\Crammd5::class,
@@ -67,7 +67,7 @@ class SmtpPluginManager extends AbstractPluginManager
      *
      * @var FactoriesConfigurationType
      */
-    protected $factories = [
+    protected array $factories = [
         Smtp\Auth\Crammd5::class => InvokableFactory::class,
         Smtp\Auth\Login::class   => InvokableFactory::class,
         Smtp\Auth\Plain::class   => InvokableFactory::class,
@@ -87,7 +87,7 @@ class SmtpPluginManager extends AbstractPluginManager
      *
      * {@inheritDoc}
      */
-    public function validate(mixed $instance)
+    public function validate(mixed $instance): void
     {
         if (! $instance instanceof $this->instanceOf) {
             throw new InvalidServiceException(sprintf(
